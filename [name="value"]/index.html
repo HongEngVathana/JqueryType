@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Attribute Selector Test: [name="value"]</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p name="value">[name="value"]</p>
+
+    <script>
+      $(document).ready(function () {
+        $('[name="value"]').addClass("highlight");
+      });
+    </script>
+  </body>
+</html>

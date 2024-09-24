@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Child Filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // First child
+        $("p:first-child").css("background-color", "yellow");
+
+        // First of type
+        $("p:first-of-type").css("color", "blue");
+
+        // Last child
+        $("p:last-child").css("background-color", "green");
+
+        // Last of type
+        $("p:last-of-type").css("color", "red");
+
+        // nth child (2nd in this case)
+        $("p:nth-child(2)").css("background-color", "orange");
+
+        // nth last child (2nd from last)
+        $("p:nth-last-child(2)").css("background-color", "pink");
+
+        // nth last of type (2nd from last of type)
+        $("p:nth-last-of-type(2)").css("color", "purple");
+
+        // nth of type (1st p tag in the group)
+        $("p:nth-of-type(1)").css("color", "brown");
+
+        // Only child
+        $("p:only-child").css("border", "2px solid black");
+
+        // Only of type
+        $("p:only-of-type").css("border", "2px dashed red");
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <!-- First child -->
+      <p>First child example (1st child of the div).</p>
+      <p>Second child (not selected).</p>
+    </div>
+
+    <div>
+      <!-- First of type -->
+      <p>First of type example (first paragraph in this div).</p>
+      <span>This is a span element (not selected).</span>
+    </div>
+
+    <div>
+      <!-- Last child -->
+      <p>First child (not selected).</p>
+      <p>Last child example (last child of the div).</p>
+    </div>
+
+    <div>
+      <!-- Last of type -->
+      <p>First paragraph (not selected).</p>
+      <p>Last of type example (last paragraph in this div).</p>
+      <span>This is a span element (not selected).</span>
+    </div>
+
+    <div>
+      <!-- nth child and nth-last-child -->
+      <p>First child (not selected).</p>
+      <p>nth child and nth-last-child example (selected as 2nd child).</p>
+      <p>Third child (not selected).</p>
+    </div>
+
+    <div>
+      <!-- nth of type and nth-last-of-type -->
+      <p>First of type (nth-of-type example).</p>
+      <p>nth-last-of-type example (second last paragraph of type).</p>
+      <p>Last paragraph of type (not selected).</p>
+    </div>
+
+    <div>
+      <!-- Only child and only-of-type -->
+      <p>Only child example (only child of this div).</p>
+    </div>
+
+    <div>
+      <!-- Only of type -->
+      <p>Only of type example (only paragraph in this div).</p>
+      <span>This is a span element (not selected).</span>
+    </div>
+  </body>
+</html>

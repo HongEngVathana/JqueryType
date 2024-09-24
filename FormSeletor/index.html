@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Form Selectors</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        // Button
+        $(":button").addClass("highlight");
+
+        // Checkbox
+        $(":checkbox").addClass("highlight");
+
+        // Checked (only applies to selected checkboxes or radio buttons)
+        $(":checked").addClass("highlight");
+
+        // Disabled elements
+        $(":disabled").addClass("highlight");
+
+        // Enabled elements
+        $(":enabled").addClass("highlight");
+
+        // Focused element
+        $(":focus").addClass("highlight");
+
+        // File input
+        $(":file").addClass("highlight");
+
+        // Image input
+        $(":image").addClass("highlight");
+
+        // Input (all input elements)
+        $(":input").addClass("highlight");
+
+        // Password input
+        $(":password").addClass("highlight");
+
+        // Radio input
+        $(":radio").addClass("highlight");
+
+        // Reset button
+        $(":reset").addClass("highlight");
+
+        // Selected option in a dropdown
+        $(":selected").addClass("highlight");
+
+        // Submit button
+        $(":submit").addClass("highlight");
+
+        // Text input
+        $(":text").addClass("highlight");
+      });
+    </script>
+  </head>
+  <body>
+    <h3>Form Selectors Example</h3>
+
+    <!-- Button -->
+    <button type="button">Button</button>
+
+    <!-- Checkbox -->
+    <input type="checkbox" name="option1" value="Option 1" /> Option 1<br />
+
+    <!-- Checked (Checkbox pre-checked) -->
+    <input type="checkbox" name="option2" value="Option 2" checked /> Option
+    2<br />
+
+    <!-- Disabled -->
+    <input type="text" name="name" value="Disabled input" disabled /><br />
+
+    <!-- Enabled -->
+    <input type="text" name="name" value="Enabled input" /><br />
+
+    <!-- Focus (Will be focused) -->
+    <input type="text" name="focus" value="Focus me" autofocus /><br />
+
+    <!-- File input -->
+    <input type="file" /><br />
+
+    <!-- Image input -->
+    <input type="image" src="submit.png" alt="Submit" /><br />
+
+    <!-- Password input -->
+    <input type="password" name="password" value="password123" /><br />
+
+    <!-- Radio input -->
+    <input type="radio" name="radioGroup" value="Option 1" /> Radio Option 1<br />
+    <input type="radio" name="radioGroup" value="Option 2" checked /> Radio
+    Option 2<br />
+
+    <!-- Reset button -->
+    <input type="reset" value="Reset" /><br />
+
+    <!-- Dropdown with selected option -->
+    <select>
+      <option value="1">One</option>
+      <option value="2" selected>Two</option></select
+    ><br />
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit" /><br />
+
+    <!-- Text input -->
+    <input type="text" value="Text input" /><br />
+  </body>
+</html>
